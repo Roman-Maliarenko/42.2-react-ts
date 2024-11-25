@@ -2,7 +2,6 @@ import './style.css'
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 
-
 function LoginForm (){
     return (
         <form className="login-form-wrapper">
@@ -23,7 +22,7 @@ function LoginForm (){
               label="Password"
             />
           </div>
-          <Button name="Login" type="submit" />
+          <Button name="Login" type="submit"/>
         </form>
       );
 }
