@@ -1,0 +1,12 @@
+.input-container{
+    width: 395px;
+    border-radius: 4px;
+    height: 40px;
+    border: solid 1.4px;
+}
+
+.data-container{
+    color: gray;
+    display: flex;
+    justify-content:flex-start;
+}
