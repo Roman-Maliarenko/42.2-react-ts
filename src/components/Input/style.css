@@ -1,12 +1,25 @@
-.input-container{
-    width: 395px;
-    border-radius: 4px;
-    height: 40px;
-    border: solid 1.4px;
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
 }
 
-.data-container{
-    color: gray;
-    display: flex;
-    justify-content:flex-start;
+label {
+  font-size: 16px;
+  color: #6f6f6f;
+}
+
+.input-element {
+  width: 100%;
+  height: 50px;
+  padding: 12px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-element::placeholder {
+  color: #a19f9f;
 }

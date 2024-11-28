@@ -15,24 +15,23 @@ function Counter() {
   // console.log(count);
   // const setCount = result[1];
   // console.log(setCount);
-
   //Шаг 3 - необходимо прописать функции, которые будут менять состояние. Внутри этих функций нужно использовать setCount
-  const onPlusClick = () => {
+  const onPlusClick = (): void => {
     setCount((prevValue) => prevValue + 1);
   };
 
-  const onMinusClick = () => {
+  const onMinusClick = (): void => {
     setCount((prevValue) => prevValue - 1);
   };
 
   return (
     <div className="counter-container">
       <div className="button-wrapper">
-        <Button buttonName="-" onClick={onMinusClick} />
+        <Button name="-" onClick={onMinusClick} />
       </div>
       <div className="counter-result">{count}</div>
       <div className="button-wrapper">
-        <Button buttonName="+" onClick={onPlusClick} />
+        <Button name="+" onClick={onPlusClick} />
       </div>
     </div>
   );

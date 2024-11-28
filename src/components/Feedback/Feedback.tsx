@@ -6,15 +6,15 @@ function Feedback() {
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
 
-  const onLikesClick = () => {
+  const onLikesClick = (): void => {
     setLikes(likes + 1);
   };
 
-  const onDislikesClick = () => {
+  const onDislikesClick = (): void => {
     setDislikes(dislikes + 1);
   };
 
-  const onResetClick = () => {
+  const onResetClick = (): void => {
     setLikes(0);
     setDislikes(0);
   };
@@ -23,13 +23,13 @@ function Feedback() {
     <div className="counter-container">
         <div className="counter-likes">{likes}</div>
       <div className="button-likes">
-        <Button buttonName={"Like 👍"} onClick={onLikesClick} />
+        <Button name={"Like 👍"} onClick={onLikesClick} />
       </div>
       <div className="button-reset">
-        <Button buttonName={"Reset"} onClick={onResetClick} />
+        <Button name={"Reset"} onClick={onResetClick} />
       </div>
       <div className="button-dislike">
-        <Button buttonName={"Dislike 👎"} onClick={onDislikesClick} />
+        <Button name={"Dislike 👎"} onClick={onDislikesClick} />
       </div>
         <div className="counter-dislikes">{dislikes}</div>
     </div>
