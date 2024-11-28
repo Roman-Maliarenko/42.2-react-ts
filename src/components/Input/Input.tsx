@@ -1,19 +1,22 @@
 import "./style.css";
 import { InputProps } from "./types";
+import { InputContainer } from "./style";
+import { LabelContainer } from "./style";
+import { InputElement } from "./style";
 
 function Input({ name, id, type = "text", placeholder, label }: InputProps) {
   return (
-    <div className="input-container">
+    <InputContainer>
       {/* Пример оператора условного рендеринга */}
-      {label && <label htmlFor={id}>{label}</label>}
-      <input
+      {label && <LabelContainer htmlFor={id}>{label}</LabelContainer>}
+      <InputElement
         id={id}
         name={name}
         type={type}
         placeholder={placeholder}
         className="input-element"
       />
-    </div>
+    </InputContainer>
   );
 }
 

@@ -1,6 +1,13 @@
 import Button from "../Button/Button";
 import { useState } from "react";
-import "./style.css";
+
+import { Body } from "./style";
+import { CounterContainer } from "./style";
+import { ButtonDislikes } from "./style";
+import { ButtonLikes } from "./style";
+import { CounterDislikes } from "./style";
+import { CounterLikes } from "./style";
+import { ButtonReset } from "./style";
 
 function Feedback() {
   const [likes, setLikes] = useState(0);
@@ -20,19 +27,23 @@ function Feedback() {
   };
 
   return (
-    <div className="counter-container">
-        <div className="counter-likes">{likes}</div>
-      <div className="button-likes">
-        <Button name={"Like 👍"} onClick={onLikesClick} />
-      </div>
-      <div className="button-reset">
-        <Button name={"Reset"} onClick={onResetClick} />
-      </div>
-      <div className="button-dislike">
-        <Button name={"Dislike 👎"} onClick={onDislikesClick} />
-      </div>
-        <div className="counter-dislikes">{dislikes}</div>
-    </div>
+    <Body>
+      <CounterContainer className="counter-container">
+        <CounterLikes className="counter-likes">{likes}</CounterLikes>
+        <ButtonLikes className="button-likes">
+          <Button name={"Like 👍"} onClick={onLikesClick} />
+        </ButtonLikes>
+        <ButtonReset className="button-reset">
+          <Button name={"Reset"} onClick={onResetClick} />
+        </ButtonReset>
+        <ButtonDislikes className="button-dislike">
+          <Button name={"Dislike 👎"} onClick={onDislikesClick} />
+        </ButtonDislikes>
+        <CounterDislikes className="counter-dislikes">
+          {dislikes}
+        </CounterDislikes>
+      </CounterContainer>
+    </Body>
   );
 }
 

@@ -1,11 +1,11 @@
-import "./style.css";
 import { ButtonProps } from "./types";
+import { MainButton } from "./style";
 
-function Button({ name, type = "button", onClick }: ButtonProps) {
+function Button({ name, type = "button", onClick}: ButtonProps) {
   return (
-    <button className="main-button" type={type} onClick={onClick}>
-      {name}
-    </button>
+    <MainButton type={type} onClick={onClick}>
+      {name} 
+    </MainButton>
   );
 }
 
