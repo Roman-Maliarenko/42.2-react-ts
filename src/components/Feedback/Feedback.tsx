@@ -1,45 +1,45 @@
-import Button from "../Button/Button";
 import { useState } from "react";
-import "./style.css";
+import Button from "../Button/Button";
+import "./styles.ts";
+import {
+  FeedbackContainer,
+  FeedbackResultContainer,
+  LikeDislikeContainer,
+  Result
+} from './styles';
 
 function Feedback() {
-  const [likes, setLikes] = useState(0);
-  const [dislikes, setDislikes] = useState(0);
+  const [likes, setLikes] = useState<number>(0);
+  const [dislikes, setDisikes] = useState<number>(0);
 
-  const onLikesClick = (): void => {
-    setLikes(likes + 1);
+  const addLike = (): void => {
+    setLikes((prevValue) => prevValue + 1);
   };
 
-  const onDislikesClick = (): void => {
-    setDislikes(dislikes + 1);
+  const addDislike = (): void => {
+    setDisikes((prevValue) => prevValue + 1);
   };
 
-  const onResetClick = (): void => {
+  const resetResults = (): void => {
     setLikes(0);
-    setDislikes(0);
-  };
+    setDisikes(0);
+  }
 
   return (
-    <div className="counter-container">
-        <div className="counter-likes">{likes}</div>
-      <div className="button-likes">
-        <Button name={"Like 👍"} onClick={onLikesClick} />
-      </div>
-      <div className="button-reset">
-        <Button name={"Reset"} onClick={onResetClick} />
-      </div>
-      <div className="button-dislike">
-        <Button name={"Dislike 👎"} onClick={onDislikesClick} />
-      </div>
-        <div className="counter-dislikes">{dislikes}</div>
-    </div>
+    <FeedbackContainer>
+      <FeedbackResultContainer>
+        <LikeDislikeContainer>
+          <Result>{likes}</Result>
+          <Button name="LIKE" onClick={addLike} />
+        </LikeDislikeContainer>
+        <LikeDislikeContainer>
+          <Result>{dislikes}</Result>
+          <Button name="DISLIKE" onClick={addDislike} />
+        </LikeDislikeContainer>
+      </FeedbackResultContainer>
+      <Button name="RESET RESULTS" onClick={resetResults} />
+    </FeedbackContainer>
   );
 }
 
 export default Feedback;
-
-// кнопка “Like” и слева от неё количество лайков
-// кнопка “Dislike" и справа от неё количество дизлайков
-// Кнопка “Reset Results”, при клике на которую, лайки и дизлайки обнуляются
-// Для кнопок используйте компонент Button
-// Стили на ваше усмотрение

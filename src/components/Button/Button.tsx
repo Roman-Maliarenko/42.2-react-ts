@@ -1,11 +1,12 @@
 import "./style.css";
 import { ButtonProps } from "./types";
+import { MainButton } from "./styles";
 
-function Button({ name, type = "button", onClick }: ButtonProps) {
+function Button({ name, type = "button", onClick, disabled = false}: ButtonProps) {
   return (
-    <button className="main-button" type={type} onClick={onClick}>
+    <MainButton className="main-button" type={type} disabled = {disabled} onClick={onClick}>
       {name}
-    </button>
+    </MainButton>
   );
 }
 

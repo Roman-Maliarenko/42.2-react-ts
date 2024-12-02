@@ -1,17 +1,18 @@
-import "./style.css";
+import "./styles.ts";
+import { Lesson06Container } from "./styles.js";
 
 function Lesson06() {
-  // 1. Типизация строк 
+  // 1. Типизация строк
   let userName: string = 'Tom';
-  userName = '28';
+  userName = "28";
   userName = '';
   let fullName: string = `${userName} Smith`;
-  
+
   let result: string = '2';
   result = 1 + 2 + '4';
   console.log(result);
-  
-  // 2. Типизация чисел 
+
+  //2. Типизация чисел
   let luckyNumber: number = 7;
   // luckyNumber = '34';
   luckyNumber = NaN;
@@ -20,29 +21,31 @@ function Lesson06() {
   luckyNumber = 1.4;
   // luckyNumber = 2 + '3';
 
-  // BigInt - bigInt
+  //тип BigInt - bigint
 
-  // 3. типизация логического типа
+  //3. Типизация логического типа
   let isAdmin: boolean = true;
   isAdmin = false;
   // isAdmin = undefined;
-  isAdmin = 2>1;
-  
+  isAdmin = 2 > 1;
+  isAdmin = !!1;
   console.log(isAdmin);
 
-  // 4. null и undefiend
-  let emtyValue: null = null;
-  // emtyValue = 0; 
-  // emtyValue = undefined
+  //4. null и undefined
+  let emptyValue: null = null;
+  // emptyValue = 0;
+  // emptyValue = undefined;
+
   let data: undefined = undefined;
   // data = 0;
   // data = null;
 
-  // 5. Типизация массива
+  //5.Типизация массива
   const colors: string[] = ['red', 'blue', 'black'];
+  // colors.push(23);
   colors.push('23');
-  // colors[0] = 234566'
-  colors[0] = '33466745';
+  // colors[0] = 345234;
+  colors[0] = '345234';
 
   //6. Кортеж (tupel)
   const fruits: [string, number] = ['apple', 4];
@@ -120,7 +123,7 @@ function Lesson06() {
   }
 
   console.log(animal);
-  
+
 
   interface Zoo {
     animalData: Animal
@@ -135,12 +138,11 @@ function Lesson06() {
     city: 'Berlin'
   }
 
-
-  
   return (
-  <div className="lesson05-container">
-    Lesson 6 - Type Script
-  </div>
+    <Lesson06Container>
+      Lesson 6 - Type Script
+    </Lesson06Container>
   );
 }
+
 export default Lesson06;
