@@ -2,7 +2,7 @@ import "./styles.ts";
 import { InputProps } from './types';
 import { InputContainer, InputElement, Label } from './styles';
 
-function Input({ name, id, type = 'text', placeholder, label }: InputProps) {
+function Input({ name, id, type = 'text', placeholder, label, value, onChange }: InputProps) {
   return (
     <InputContainer>
       {/* Пример оператора условного рендеринга */}
@@ -11,6 +11,8 @@ function Input({ name, id, type = 'text', placeholder, label }: InputProps) {
         id={id}
         name={name}
         type={type}
+        value={value}
+        onChange={onChange}
         placeholder={placeholder}
         className="input-element"
       />
