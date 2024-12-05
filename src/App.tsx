@@ -1,3 +1,4 @@
+import Homework09 from "homeworks/Homework09/Homework";
 import GlobalStyles from "./styles/GlobalStyles";
 
 // import Lesson06 from "./lessons/Lesson06/Lesson06";
@@ -18,6 +19,7 @@ function App() {
     {/* <Lesson08 /> */}
     {/* <Homework08 /> */}
     {/* <Lesson09 /> */}
+    <Homework09 />
   </>
   );
 }
