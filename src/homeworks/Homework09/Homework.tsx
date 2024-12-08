@@ -1,5 +1,6 @@
 import Input from "components/Input/Input";
-
+import { ChangeEvent, useEffect, useState } from "react";
+import axios from "axios";
 import {
   Homework09Container,
   FirstInputContainer,
@@ -7,28 +8,30 @@ import {
   RandomImage,
   HeaderText,
 } from "./styles";
-import { ChangeEvent, useEffect, useState } from "react";
-import axios from "axios";
 
 function Homework09() {
   const [firstValue, setFirstValue] = useState<string>("");
   const [secondValue, setSecondtValue] = useState<string>("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState<string>("");
 
   const imageOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     setFirstValue(event.target.value);
   };
+
+  const inputOnChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSecondtValue(event.target.value);
+  }
 
   const getRandomImage = async () => {
     try {
       const response = await axios.get(
         "https://dog.ceo/api/breeds/image/random"
       );
-
       setImage(response.data.message);
     } catch (err) {
       console.log(err);
     }
+
   };
   useEffect(() => {
     getRandomImage();
@@ -36,9 +39,7 @@ function Homework09() {
 
   return (
     <Homework09Container>
-      <HeaderText>
-        Random Dog Image
-      </HeaderText>
+      <HeaderText>Random Dog Image</HeaderText>
       <FirstInputContainer>
         <Input
           name="first"
@@ -52,7 +53,7 @@ function Homework09() {
           name="second"
           placeholder="Enter text"
           value={secondValue}
-          onChange={(e) => setSecondtValue(e.target.value)}
+          onChange={inputOnChange}
         />
       </SecondInputContainer>
       <RandomImage src={image} />
