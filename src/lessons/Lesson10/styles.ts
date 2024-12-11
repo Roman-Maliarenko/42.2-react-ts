@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Homework10Container = styled.div`
+export const Lesson10Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -35,7 +35,7 @@ export const AllDataContainer = styled.div`
   flex-direction: column;
   background-color: rgb(255, 191, 95);
   width: 850px;
-  max-height: 700px;
+  height: 700px;
   border-radius: 24px;
   overflow-y: auto;
   `;
