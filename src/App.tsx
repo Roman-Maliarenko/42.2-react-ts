@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Homework09 from "homeworks/Homework09/Homework";
+import GlobalStyles from "./styles/GlobalStyles";
+
+// import Lesson06 from "./lessons/Lesson06/Lesson06";
+// import Lesson08 from "./lessons/Lesson08/Lesson08";
+// import Lesson09 from "lessons/Lesson09/Lesson09";
+
+
+// import Homework08 from "./homeworks/Homework08/Homework08";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <GlobalStyles />
+    {/* <Lesson06 /> */}
+    {/* <Lesson07 /> */}
+    {/* <Consultation04 /> */}
+    {/* <Homework07 /> */}
+    {/* <Lesson08 /> */}
+    {/* <Homework08 /> */}
+    {/* <Lesson09 /> */}
+    <Homework09 />
+  </>
   );
 }
 
