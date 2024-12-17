@@ -14,6 +14,6 @@ export const MainButton = styled.button<MainButtonProps>`
   border-radius: 4px;
   color: white;
   font-family: Lato, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   cursor: ${({ disabled }) => (disabled ? "auto" : "pointer")};
 `;
