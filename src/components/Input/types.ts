@@ -11,4 +11,5 @@ export interface InputProps {
   onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
   error?: string;
   checked?: boolean;
+
 }
