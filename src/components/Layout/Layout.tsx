@@ -15,7 +15,7 @@ function Layout({ children }: LayoutProps) {
           </StyledNavLink>
           <StyledNavLink to='/users' style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
             Users
-          </StyledNavLink>
+          </StyledNavLink>          
         </NavContainer>
       </Header>
       <Main>

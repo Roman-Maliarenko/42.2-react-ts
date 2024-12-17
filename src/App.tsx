@@ -5,6 +5,10 @@ import Layout from "components/Layout/Layout";
 import Home from "components/pages/Home/Home";
 import About from "components/pages/About/About";
 import Users from "components/pages/Users/Users";
+import Clients from "components/pages/Clients/Clients";
+import FirstComponent from "components/pages/Clients/components/FirstComponent/FirstComponent";
+import SecondComponent from "components/pages/Clients/components/SecondComponent/SecondComponent";
+import ThirdComponent from "components/pages/Clients/components/ThirdComponent/ThirdComponent";
 
 // import Lesson06 from "./lessons/Lesson06/Lesson06";
 // import Lesson08 from "./lessons/Lesson08/Lesson08";
@@ -23,8 +27,14 @@ function App() {
           <Route path="path" element={<About />} />
           <Route path="users" element={<Users />} />
           <Route path="*" element="Page not found" />
+          <Route path="logo" element={<Home />} />
+          <Route path="/clients" element={<Clients />} />
         </Routes>
       </Layout>
+
+      {/* <Route path="/firstComponent" element={<FirstComponent />}/>
+      <Route path="/secondComponent" element={<SecondComponent />}/>
+      <Route path="/thirdComponent" element={<ThirdComponent />}/> */}
       {/* <Lesson06 /> */}
       {/* <Lesson07 /> */}
       {/* <Consultation04 /> */}
