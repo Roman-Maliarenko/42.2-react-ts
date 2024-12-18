@@ -2,7 +2,11 @@ import "./styles.ts";
 import { InputProps } from './types';
 import { ErrorMesage, InputContainer, InputElement, Label } from './styles';
 
+
+function Input({ name, id, type = 'text', placeholder, label, value, onChange, error, checked }: InputProps) {
+
 function Input({ name, id, type = 'text', placeholder, label, value, onChange, error }: InputProps) {
+
   return (
     <InputContainer>
       {/* Пример оператора условного рендеринга */}
@@ -15,6 +19,7 @@ function Input({ name, id, type = 'text', placeholder, label, value, onChange, e
         onChange={onChange}
         placeholder={placeholder}
         className="input-element"
+        checked={checked}
       />
       <ErrorMesage>{error}</ErrorMesage>
         {/* {error && <ErrorMessage>{error}</ErrorMessage>} */}
