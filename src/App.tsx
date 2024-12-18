@@ -6,9 +6,9 @@ import Home from "components/pages/Home/Home";
 import About from "components/pages/About/About";
 import Users from "components/pages/Users/Users";
 import Clients from "components/pages/Clients/Clients";
-import FirstComponent from "components/pages/Clients/components/FirstComponent/FirstComponent";
-import SecondComponent from "components/pages/Clients/components/SecondComponent/SecondComponent";
-import ThirdComponent from "components/pages/Clients/components/ThirdComponent/ThirdComponent";
+import Cola from "components/pages/Clients/components/Cola/Cola";
+import Fanta from "components/pages/Clients/components/Fanta/Fanta";
+import Sprite from "components/pages/Clients/components/Sprite/Sprite";
 
 // import Lesson06 from "./lessons/Lesson06/Lesson06";
 // import Lesson08 from "./lessons/Lesson08/Lesson08";
@@ -24,17 +24,16 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="path" element={<About />} />
+          <Route path="about" element={<About />} />
           <Route path="users" element={<Users />} />
           <Route path="*" element="Page not found" />
           <Route path="logo" element={<Home />} />
-          <Route path="/clients" element={<Clients />} />
+          <Route path="clients" element={<Clients />} />
+          <Route path="/clients/cola" element={<Cola />} />
+          <Route path="/clients/fanta" element={<Fanta />} />
+          <Route path="/clients/sprite" element={<Sprite />} />
         </Routes>
       </Layout>
-
-      {/* <Route path="/firstComponent" element={<FirstComponent />}/>
-      <Route path="/secondComponent" element={<SecondComponent />}/>
-      <Route path="/thirdComponent" element={<ThirdComponent />}/> */}
       {/* <Lesson06 /> */}
       {/* <Lesson07 /> */}
       {/* <Consultation04 /> */}
